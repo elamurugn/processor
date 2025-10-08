@@ -167,8 +167,6 @@ $current_step = $_SESSION['current_step'];
 $step_config = $processing_steps[$current_step] ?? null;
 ?>
 
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -179,18 +177,12 @@ $step_config = $processing_steps[$current_step] ?? null;
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
         <div class="main-content">
             <!-- Progress Sidebar -->
             <aside class="progress-sidebar">
                 <div class="progress-card">
-                    <div class="progress-card-header">
-                        <h3>Processing Steps</h3>
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L13.09 6.26L17 4L14.74 8.04L19 8L15.96 11.26L20 12L15.96 12.74L19 16L14.74 15.96L17 20L13.09 17.74L12 22L10.91 17.74L7 20L9.26 15.96L5 16L8.04 12.74L4 12L8.04 11.26L5 8L9.26 8.04L7 4L10.91 6.26L12 2Z" fill="#22C55E"/>
-                        </svg>
-                    </div>
-                    <div class="progress-summary-sidebar">
+                    <h3>Processing Steps</h3>
+                    <div class="progress-summary">
                         <span class="step-counter">Step <?php echo $current_step; ?> of 24</span>
                         <div class="progress-bar">
                             <div class="progress-fill" style="width: <?php echo ($current_step / 24) * 100; ?>%"></div>
